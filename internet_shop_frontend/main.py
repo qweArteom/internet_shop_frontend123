@@ -25,7 +25,7 @@ def get_product(id):
 
 @app.get("/buy_product/<id>")
 def buy_product(id):
-    return render_template("index.html")
+    return "Ви успішно купили товар"
 
 
 @app.route("/signup/", methods=["GET", "POST"])
@@ -53,8 +53,8 @@ def login():
         if msg:
             flash(msg)
             return redirect(url_for("cabinet"))
-    else:
-        return redirect(url_for("login"))
+        else:
+            return redirect(url_for("login"))
     
     return render_template("login.html", form=form)
 

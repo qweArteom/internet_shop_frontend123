@@ -15,7 +15,7 @@
             <p class="card-text">{{ product.description|truncate(50) }}</p>
             <p class="card-text">
               {{ product.price }} грн
-              <a href="{{ url_for('get_product', index=product.id) }}" class="btn btn-sm btn-primary">Про товар</a>
+              <a href="{{ url_for('get_product', id=product.id) }}" class="btn btn-sm btn-primary">Про товар</a>
             </p>
           </div>
         </div>
